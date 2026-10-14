@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elegant Enterprises Pvt Ltd — manufacturer of sanitary, tissue, and hygiene products in Galle, Sri Lanka.">
+  <title>Elegant Enterprises Pvt Ltd | Sanitary Product Manufacturer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/site.css?v=6">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body class="antialiased">
+
+  <div class="bg-[var(--navy)] text-white/80 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+      <p class="tracking-wide">Sanitary &amp; hygiene manufacturing · Galle, Sri Lanka</p>
+      <div class="flex flex-wrap gap-x-4 gap-y-1">
+        <a href="mailto:Sales@elegantenterprises.info" class="hover:text-white">Sales@elegantenterprises.info</a>
+        <a href="tel:0741008160" class="hover:text-white font-semibold text-white">074 100 8160</a>
+        <a href="https://wa.me/94741008160?text=Hello%20Elegant%20Enterprises%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="hover:text-white font-semibold text-[#7dffb3]" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-[var(--line)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+      <a href="index.html" class="flex items-center gap-3 min-w-0">
+        <span class="logo-plate logo-plate--header">
+          <img src="assets/logo.png" alt="Elegant">
+        </span>
+        <span class="hidden sm:block min-w-0">
+          <span class="block font-bold text-[var(--navy)] leading-tight text-sm lg:text-base">Elegant Enterprises</span>
+          <span class="block text-[11px] uppercase tracking-[0.16em] text-[var(--muted)] font-semibold">Pvt Ltd · Manufacturer</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7" aria-label="Main">
+        <a href="index.html" class="nav-link is-active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="factory.html" class="nav-link">Factory</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="contact.html" class="btn-primary hidden lg:inline-flex !py-2.5 !px-4 text-sm">Request a quote</a>
+        <button type="button" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="menu-backdrop" class="hidden fixed inset-0 bg-[#071536]/50 z-40 md:hidden" aria-hidden="true"></div>
+    <nav id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-full bg-white border-b shadow-xl z-50" aria-label="Mobile">
+      <div class="px-4 py-4 flex flex-col gap-1 font-semibold text-[var(--navy)]">
+        <a href="index.html" class="py-3 px-3 rounded-xl bg-[#eef3ff] text-[var(--brand)]">Home</a>
+        <a href="about.html" class="py-3 px-3 rounded-xl hover:bg-[var(--paper)]">About Us</a>
+        <a href="factory.html" class="py-3 px-3 rounded-xl hover:bg-[var(--paper)]">Factory Details</a>
+        <a href="contact.html" class="py-3 px-3 rounded-xl hover:bg-[var(--paper)]">Contact Us</a>
+        <a href="tel:0741008160" class="btn-primary inline-flex mt-2">Call 074 100 8160</a>
+        <a href="https://wa.me/94741008160?text=Hello%20Elegant%20Enterprises%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="btn-whatsapp inline-flex" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="text-center lg:text-left">
+          <p class="text-[var(--gold)] text-xs sm:text-sm font-bold uppercase tracking-[0.22em] mb-4">Elegant Enterprises Pvt Ltd</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] mb-5">Hygiene products crafted with care in Galle</h1>
+          <p class="text-base sm:text-lg text-white/80 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            We manufacture essential sanitary goods — tissue and paper, protective masks, baby care, and household hygiene — for retailers, institutions, and distributors across Sri Lanka.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
+            <a href="contact.html" class="btn-primary inline-flex">Talk to sales</a>
+            <a href="factory.html" class="btn-ghost inline-flex">View the factory</a>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="bg-white text-[var(--ink)] rounded-[28px] p-6 sm:p-8 w-full max-w-md shadow-2xl">
+            <div class="flex justify-center mb-5">
+              <span class="logo-plate logo-plate--hero">
+                <img src="assets/logo.png" alt="Elegant registered brand mark">
+              </span>
+            </div>
+            <p class="text-center serif text-3xl text-[var(--navy)] leading-none">Elegant Enterprises</p>
+            <p class="text-center text-xs uppercase tracking-[0.2em] text-[var(--muted)] font-semibold mt-2 mb-6">Private Limited</p>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-2xl bg-[var(--paper)] p-3 text-center">
+                <p class="font-bold text-[var(--navy)]">Galle</p>
+                <p class="text-[var(--muted)] text-xs mt-1">Manufacturing base</p>
+              </div>
+              <div class="rounded-2xl bg-[var(--paper)] p-3 text-center">
+                <p class="font-bold text-[var(--navy)]">B2B</p>
+                <p class="text-[var(--muted)] text-xs mt-1">Bulk &amp; trade supply</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-8 relative z-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div class="card p-4 sm:p-5 text-center">
+          <i class="fas fa-industry text-[var(--brand)] mb-2" aria-hidden="true"></i>
+          <p class="font-bold text-sm sm:text-base text-[var(--navy)]">In-house production</p>
+        </div>
+        <div class="card p-4 sm:p-5 text-center">
+          <i class="fas fa-certificate text-[var(--brand)] mb-2" aria-hidden="true"></i>
+          <p class="font-bold text-sm sm:text-base text-[var(--navy)]">Batch-controlled quality</p>
+        </div>
+        <div class="card p-4 sm:p-5 text-center">
+          <i class="fas fa-truck text-[var(--brand)] mb-2" aria-hidden="true"></i>
+          <p class="font-bold text-sm sm:text-base text-[var(--navy)]">Island-wide supply</p>
+        </div>
+        <div class="card p-4 sm:p-5 text-center">
+          <i class="fas fa-handshake text-[var(--brand)] mb-2" aria-hidden="true"></i>
+          <p class="font-bold text-sm sm:text-base text-[var(--navy)]">Trade partnerships</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 px-4 sm:px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl mb-10">
+          <p class="brand-kicker mb-3">Our range</p>
+          <div class="gold-rule mb-4"></div>
+          <h2 class="text-4xl sm:text-5xl text-[var(--navy)] font-semibold">What we manufacture</h2>
+          <p class="text-[var(--muted)] mt-3 text-base sm:text-lg">Everyday hygiene products, produced and packed at our Galle facility for homes, shops, and institutions.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <article class="card p-6 hover:-translate-y-1 transition">
+            <div class="icon-bubble mb-4"><i class="fas fa-head-side-mask" aria-hidden="true"></i></div>
+            <h3 class="text-2xl font-semibold text-[var(--navy)] mb-2">Face masks &amp; PPE</h3>
+            <p class="text-sm text-[var(--muted)] leading-relaxed">3-ply disposable masks, foldable respirators, and dust protection for retail and bulk orders.</p>
+          </article>
+          <article class="card p-6 hover:-translate-y-1 transition">
+            <div class="icon-bubble mb-4"><i class="fas fa-toilet-paper" aria-hidden="true"></i></div>
+            <h3 class="text-2xl font-semibold text-[var(--navy)] mb-2">Tissue &amp; paper</h3>
+            <p class="text-sm text-[var(--muted)] leading-relaxed">Toilet tissue rolls, serviettes, and commercial paper goods for homes and businesses.</p>
+          </article>
+          <article class="card p-6 hover:-translate-y-1 transition">
+            <div class="icon-bubble mb-4"><i class="fas fa-baby" aria-hidden="true"></i></div>
+            <h3 class="text-2xl font-semibold text-[var(--navy)] mb-2">Baby care</h3>
+            <p class="text-sm text-[var(--muted)] leading-relaxed">Absorbent diapers and related sanitary supplies designed for sensitive skin.</p>
+          </article>
+          <article class="card p-6 hover:-translate-y-1 transition">
+            <div class="icon-bubble mb-4"><i class="fas fa-pump-soap" aria-hidden="true"></i></div>
+            <h3 class="text-2xl font-semibold text-[var(--navy)] mb-2">Sanitary essentials</h3>
+            <p class="text-sm text-[var(--muted)] leading-relaxed">Household sanitizing products, soaps, and hygiene accessories.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 sm:px-6 pb-16">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-5 gap-6">
+        <div class="lg:col-span-3 card card-accent p-7 sm:p-10">
+          <p class="brand-kicker mb-3">The company</p>
+          <h2 class="text-4xl sm:text-5xl text-[var(--navy)] font-semibold mb-4">Rooted in Galle, ready for trade</h2>
+          <p class="text-[var(--muted)] leading-relaxed mb-5">Our plant on Akuressa Road keeps production close to the Southern Province — shorter lead times for local partners, with the consistency your customers expect.</p>
+          <ul class="space-y-3 text-sm sm:text-base mb-7">
+            <li class="flex gap-3"><i class="fas fa-check text-[var(--brand)] mt-1" aria-hidden="true"></i> Bulk and private-label enquiries welcome</li>
+            <li class="flex gap-3"><i class="fas fa-check text-[var(--brand)] mt-1" aria-hidden="true"></i> Packaging and labelling support</li>
+            <li class="flex gap-3"><i class="fas fa-check text-[var(--brand)] mt-1" aria-hidden="true"></i> Factory visits by appointment</li>
+          </ul>
+          <a href="about.html" class="btn-outline inline-flex">About the company</a>
+        </div>
+        <div class="lg:col-span-2 card p-7 sm:p-8">
+          <h3 class="text-3xl font-semibold text-[var(--navy)] mb-5">Office &amp; factory hours</h3>
+          <ul class="divide-y divide-[var(--line)] text-sm sm:text-base">
+            <li class="py-3 flex justify-between gap-4"><span>Mon – Thu, Sat</span><span class="font-semibold whitespace-nowrap">8:30 AM – 5:30 PM</span></li>
+            <li class="py-3 flex justify-between gap-4 text-[var(--brand-deep)]"><span>Friday</span><span class="font-semibold whitespace-nowrap">2:30 PM – 5:30 PM</span></li>
+            <li class="py-3 flex justify-between gap-4 text-red-700"><span>Sunday</span><span class="font-semibold">Closed</span></li>
+          </ul>
+          <p class="text-xs text-[var(--muted)] mt-4">Call ahead for large orders — Friday production hours can vary.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 sm:px-6 pb-16">
+      <div class="max-w-7xl mx-auto rounded-[28px] overflow-hidden text-white px-6 sm:px-12 py-12 sm:py-14 text-center" style="background: linear-gradient(120deg, #0b1f4d, #1840b8);">
+        <p class="text-[var(--gold)] text-xs font-bold uppercase tracking-[0.22em] mb-3">Sales desk</p>
+        <h2 class="text-4xl sm:text-5xl font-semibold mb-3">Partner with a local manufacturer</h2>
+        <p class="text-white/80 max-w-xl mx-auto mb-7">Share your product mix and volumes. We will reply with availability and pricing.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="contact.html" class="btn-primary inline-flex !bg-white !text-[var(--navy)] !shadow-none">Contact us</a>
+          <a href="https://wa.me/94741008160?text=Hello%20Elegant%20Enterprises%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="btn-whatsapp inline-flex" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp sales</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[var(--navy)] text-white/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <span class="logo-plate logo-plate--footer"><img src="assets/logo.png" alt="Elegant"></span>
+        <p class="mt-4 text-sm leading-relaxed">Manufacturer of sanitary and hygiene products in Galle, Sri Lanka.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Pages</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about.html" class="hover:text-white">About Us</a></li>
+          <li><a href="factory.html" class="hover:text-white">Factory</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Factory</p>
+        <p class="text-sm leading-relaxed">496 Akuressa Road<br>Galle 80000<br>Sri Lanka</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Contact</p>
+        <a href="tel:0741008160" class="block text-sm text-white font-semibold">074 100 8160</a>
+        <a href="https://wa.me/94741008160?text=Hello%20Elegant%20Enterprises%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="inline-flex items-center gap-2 mt-2 text-sm text-[#7dffb3] hover:text-white" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp sales</a>
+        <a href="mailto:Sales@elegantenterprises.info" class="block mt-2 text-sm break-all hover:text-white">Sales@elegantenterprises.info</a>
+      </div>
+    </div>
+    <p class="text-center text-xs border-t border-white/10 py-5">&copy; <span id="year"></span> Elegant Enterprises Pvt Ltd. All rights reserved.</p>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/94741008160?text=Hello%20Elegant%20Enterprises%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

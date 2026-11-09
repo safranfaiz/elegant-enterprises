@@ -57,7 +57,7 @@ After editing `site.css`, bump the `?v=` query on the stylesheet link in each HT
 ## Contact (on site)
 
 - **Phone:** 074 100 8160  
-- **Email:** Sales@elegantenterprises.info  
+- **Email:** sales@elegantenterprises.lk  
 - **Factory:** 496 Akuressa Road, Galle 80000, Sri Lanka  
 
 ## Notes

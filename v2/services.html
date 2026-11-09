@@ -47,7 +47,13 @@
       { "@type": "Question", "name": "What is the minimum order quantity for private label manufacturing?", "acceptedAnswer": { "@type": "Answer", "text": "Minimum order quantities depend on the product, pack size and packaging. Share your product mix and expected volumes and we will confirm the MOQ, pricing and lead time in your quotation." } },
       { "@type": "Question", "name": "Do you supply distributors and wholesalers across Sri Lanka?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We supply distributors, wholesalers, supermarkets, pharmacies and institutional buyers island-wide, with bulk cartons and pallet-ready dispatch from Galle." } },
       { "@type": "Question", "name": "Can I visit the factory before placing an order?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Trade buyers can visit our manufacturing plant at 496 Akuressa Road, Galle by appointment. Call or WhatsApp 074 100 8160 to arrange a visit." } },
-      { "@type": "Question", "name": "How do I get a manufacturing quotation?", "acceptedAnswer": { "@type": "Answer", "text": "Send us the products, pack sizes, branding requirements and monthly volumes through the contact page, by email to Sales@elegantenterprises.info, or on WhatsApp at 074 100 8160." } }
+      { "@type": "Question", "name": "How do I get a manufacturing quotation?", "acceptedAnswer": { "@type": "Answer", "text": "Send us the products, pack sizes, branding requirements and monthly volumes through the contact page, by email to Sales@elegantenterprises.info, or on WhatsApp at 074 100 8160." } },
+      { "@type": "Question", "name": "What is Elegant Enterprises?", "acceptedAnswer": { "@type": "Answer", "text": "Elegant Enterprises (Pvt) Ltd is a Sri Lankan manufacturing and distribution company specialising in paper tissue, hygiene products and protective face masks, based in Galle with wholesale and private label supply across Sri Lanka." } },
+      { "@type": "Question", "name": "Who can buy from Elegant Enterprises?", "acceptedAnswer": { "@type": "Answer", "text": "We welcome wholesalers, distributors, retailers, supermarkets, hotels, restaurants, hospitals, institutions and other bulk buyers throughout Sri Lanka, including retail resellers and partners needing custom bulk orders." } },
+      { "@type": "Question", "name": "What products do we manufacture?", "acceptedAnswer": { "@type": "Answer", "text": "We make paper serviettes, toilet rolls, multifold and kitchen towels, 3-ply and KN95 face masks, baby diapers, soaps, and household sanitizers in retail packs or trade cartons from our Galle factory." } },
+      { "@type": "Question", "name": "Can I buy at wholesale prices?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Wholesale purchasing is available with competitive rates for bulk orders. Share your product list and monthly volumes so we can quote trade pricing and carton sizes." } },
+      { "@type": "Question", "name": "How do you place an order with Elegant Enterprises?", "acceptedAnswer": { "@type": "Answer", "text": "Contact sales by phone, WhatsApp or email. Share products and quantities. Receive prices and a quotation. Confirm the order. Arrange delivery and payment with our sales team." } },
+      { "@type": "Question", "name": "How can buyers work with us?", "acceptedAnswer": { "@type": "Answer", "text": "Buyers can purchase wholesale, become distribution partners, arrange hotel and corporate supply, resell through retail partnerships, or request custom bulk orders with our sales team." } }
     ]
   }
   </script>
@@ -57,6 +63,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/site.css?v=15">
+  <link rel="stylesheet" href="css/premium.css?v=1">
   <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
 <body class="antialiased">
@@ -128,7 +135,7 @@
         <div class="grid lg:grid-cols-2 gap-6 lg:gap-16 items-end mb-12">
           <div>
             <p class="eyebrow mb-4">Services</p>
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl text-[var(--navy)] font-semibold leading-[1.05]">How we support your business</h2>
+            <h2 id="services-overview-heading" class="text-4xl sm:text-5xl lg:text-6xl text-[var(--navy)] font-semibold leading-[1.05]">How we support your business</h2>
           </div>
           <p class="text-[var(--muted)] text-base sm:text-lg leading-relaxed">Whether you stock our products or need a range made to your specification, our team handles production through to dispatch.</p>
         </div>
@@ -185,11 +192,47 @@
       </div>
     </section>
 
+    <section class="sec-pad px-4 sm:px-6 py-12 sm:py-16 bg-white border-y border-[var(--line)]" aria-labelledby="about-heading">
+      <article class="max-w-3xl mx-auto text-center">
+        <h2 id="about-heading" class="sec-title mb-4">What is Elegant Enterprises?</h2>
+        <p class="faq-voice text-[var(--muted)] leading-relaxed text-base sm:text-lg">
+          <strong class="text-[var(--navy)] font-semibold">Elegant Enterprises (Pvt) Ltd</strong> is a Sri Lankan manufacturing and distribution company. We make paper tissue, hygiene products, and protective face masks. We focus on quality, fair wholesale pricing, and reliable supply for trade buyers.
+        </p>
+        <p class="faq-voice text-[var(--muted)] leading-relaxed mt-4 text-base sm:text-lg">
+          We serve wholesalers, distributors, retailers, hotels, restaurants, supermarkets, hospitals, and corporate customers across Sri Lanka. Our Akuressa Road factory in Galle runs converting, packing, and dispatch for island-wide orders.
+        </p>
+        <p class="faq-voice text-[var(--muted)] leading-relaxed mt-4 text-base sm:text-lg">
+          <strong class="text-[var(--navy)] font-semibold">Private label manufacturing</strong> is when we produce and pack hygiene goods under your brand at our plant. You share specs and artwork. We run production, quality checks, labelling, and delivery on agreed volumes.
+        </p>
+      </article>
+    </section>
+
+    <section class="sec-pad px-4 sm:px-6 py-12 sm:py-14 bg-[var(--paper)] border-b border-[var(--line)]" aria-labelledby="who-can-buy-heading">
+      <article class="max-w-3xl mx-auto">
+        <h2 id="who-can-buy-heading" class="sec-title text-center mb-4">Who can buy from Elegant Enterprises?</h2>
+        <p class="faq-voice text-[var(--muted)] leading-relaxed text-base sm:text-lg text-center">
+          We welcome inquiries from bulk buyers throughout Sri Lanka. That includes distributors expanding a hygiene range, supermarkets and pharmacies stocking household essentials, and hotels, restaurants, and offices with steady consumption needs.
+        </p>
+        <p class="faq-voice text-[var(--muted)] leading-relaxed mt-4 text-base sm:text-lg text-center">
+          Retail shops and resellers may purchase for their local markets. For custom bulk orders, contact us to discuss quantities, packaging, and delivery schedules. Our sales team supports wholesale pricing and long-term supply plans.
+        </p>
+      </article>
+    </section>
+
+    <section class="sec-pad px-4 sm:px-6 py-12 sm:py-14 bg-white border-b border-[var(--line)]" aria-labelledby="products-manufacture-heading">
+      <article class="max-w-3xl mx-auto text-center">
+        <h2 id="products-manufacture-heading" class="sec-title mb-4">What products do we manufacture?</h2>
+        <p class="faq-voice text-[var(--muted)] leading-relaxed text-base sm:text-lg">
+          We make paper serviettes, toilet rolls, multifold and kitchen towels, 3-ply and KN95 face masks, baby diapers, soaps, and household sanitizers. Each line ships in retail packs or trade cartons from Galle. See the full <a href="products.html" class="text-[var(--brand)] font-semibold">product catalogue</a> for specs and packs.
+        </p>
+      </article>
+    </section>
+
     <section class="bg-white border-y border-[var(--line)] py-16 sm:py-24 px-4 sm:px-6">
       <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         <div class="lg:col-span-5">
           <p class="eyebrow mb-4">Who we serve</p>
-          <h2 class="text-4xl sm:text-5xl text-[var(--navy)] font-semibold leading-[1.05] mb-5">Built for <span class="italic text-[var(--brand)]">trade buyers</span></h2>
+          <h2 id="trade-buyers-heading" class="text-4xl sm:text-5xl text-[var(--navy)] font-semibold leading-[1.05] mb-5">Built for <span class="italic text-[var(--brand)]">trade buyers</span></h2>
           <p class="text-[var(--muted)] text-base sm:text-lg leading-relaxed">We work with businesses that need consistent quality, clear labelling, and a team that answers the phone.</p>
         </div>
         <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -207,7 +250,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-14">
           <p class="eyebrow mb-4">Private label</p>
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl text-[var(--navy)] font-semibold leading-[1.05]">Your brand, our production</h2>
+          <h2 id="private-label-heading" class="text-4xl sm:text-5xl lg:text-6xl text-[var(--navy)] font-semibold leading-[1.05]">Your brand, our production</h2>
         </div>
         <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
           <li class="text-center px-2">
@@ -234,32 +277,48 @@
       </div>
     </section>
 
-    <section class="px-4 sm:px-6 pb-16 sm:pb-24" aria-labelledby="b2b-faq-title">
-      <div class="max-w-4xl mx-auto card p-8 sm:p-10">
-        <p class="brand-kicker mb-3">For trade buyers</p>
-        <h2 id="b2b-faq-title" class="text-4xl font-semibold text-[var(--navy)] mb-6">Manufacturing &amp; private label — FAQ</h2>
-        <dl class="space-y-6 text-sm sm:text-base">
-          <div>
-            <dt class="font-semibold text-[var(--navy)]">Can Elegant Enterprises manufacture tissue or masks under my own brand?</dt>
-            <dd class="text-[var(--muted)] mt-1">Yes. We offer private label and OEM manufacturing of toilet tissue, serviettes, face masks, baby care and sanitary products at our factory in Galle, Sri Lanka. You supply the brand and we handle production, packing and labelling.</dd>
+    <section class="sec-pad py-14 sm:py-16 px-4 sm:px-6 bg-[var(--paper)] border-t border-[var(--line)]" aria-labelledby="how-to-order-heading">
+      <article class="max-w-2xl mx-auto">
+        <h2 id="how-to-order-heading" class="sec-title text-center mb-4">How do you place an order with Elegant Enterprises?</h2>
+        <p class="faq-voice text-[var(--muted)] text-center leading-relaxed mb-6">Contact our sales team by phone, WhatsApp, or email. Share the products and quantities you need. We send current prices and a quotation. You confirm the order. We align delivery and payment with you.</p>
+        <ol class="space-y-3 text-[var(--navy)] font-medium list-decimal list-inside faq-voice">
+          <li>Contact sales by phone, WhatsApp, or email.</li>
+          <li>Share required products and quantities.</li>
+          <li>Receive product prices and a quotation.</li>
+          <li>Confirm your order.</li>
+          <li>Arrange delivery and payment with our team.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="sec-pad py-16 sm:py-20 px-4 sm:px-6 bg-white border-t border-[var(--line)]" aria-labelledby="faq-heading">
+      <div class="max-w-7xl mx-auto">
+        <article>
+          <div class="sec-head sec-head--center mb-10">
+            <p class="eyebrow mb-4">Common questions</p>
+            <h2 id="faq-heading" class="sec-title">How can buyers work with us?</h2>
           </div>
-          <div>
-            <dt class="font-semibold text-[var(--navy)]">What is the minimum order quantity for private label manufacturing?</dt>
-            <dd class="text-[var(--muted)] mt-1">Minimum order quantities depend on the product, pack size and packaging. Share your product mix and expected volumes and we will confirm the MOQ, pricing and lead time in your quotation.</dd>
-          </div>
-          <div>
-            <dt class="font-semibold text-[var(--navy)]">Do you supply distributors and wholesalers across Sri Lanka?</dt>
-            <dd class="text-[var(--muted)] mt-1">Yes. We supply distributors, wholesalers, supermarkets, pharmacies and institutional buyers island-wide, with bulk cartons and pallet-ready dispatch from Galle.</dd>
-          </div>
-          <div>
-            <dt class="font-semibold text-[var(--navy)]">Can I visit the factory before placing an order?</dt>
-            <dd class="text-[var(--muted)] mt-1">Yes. Trade buyers can visit our manufacturing plant at 496 Akuressa Road, Galle by appointment. Call or WhatsApp <a href="tel:0741008160" class="text-[var(--brand)] font-semibold">074 100 8160</a> to arrange a visit.</dd>
-          </div>
-          <div>
-            <dt class="font-semibold text-[var(--navy)]">How do I get a manufacturing quotation?</dt>
-            <dd class="text-[var(--muted)] mt-1">Send us the products, pack sizes, branding requirements and monthly volumes through the <a href="contact.html" class="text-[var(--brand)] font-semibold">contact page</a>, by email to Sales@elegantenterprises.info, or on WhatsApp at 074 100 8160.</dd>
-          </div>
-        </dl>
+          <dl class="faq-block">
+            <dt>What is Elegant Enterprises?</dt>
+            <dd class="faq-voice">Elegant Enterprises is a hygiene product manufacturer in Galle, Sri Lanka. We make toilet tissue, serviettes, face masks, baby diapers, soaps and related sanitary goods for wholesale and private label buyers.</dd>
+            <dt>What tissue and mask products do you make?</dt>
+            <dd class="faq-voice">We manufacture serviettes, toilet rolls, multifold and kitchen towels, 3-ply disposable masks, KN95 masks, and other protective face coverings. We also supply baby diapers, soaps, and household sanitizing products.</dd>
+            <dt>Who do you supply across Sri Lanka?</dt>
+            <dd class="faq-voice">We supply distributors, supermarkets, pharmacies, hotels, clinics, schools and corporate buyers island-wide. Orders ship from our Galle factory in retail packs or bulk cartons.</dd>
+            <dt>Can I buy at wholesale prices?</dt>
+            <dd class="faq-voice">Yes. Wholesale purchasing is available with competitive rates for bulk orders. Share your product list and monthly volumes so we can quote trade pricing and carton sizes.</dd>
+            <dt>Do you offer private label manufacturing?</dt>
+            <dd class="faq-voice">Yes. Private label means making and packing hygiene products under your brand at our plant. You share specs and artwork; we run production, quality checks and dispatch on agreed volumes.</dd>
+            <dt>Can Elegant Enterprises manufacture tissue or masks under my own brand?</dt>
+            <dd class="faq-voice">Yes. We offer private label and OEM manufacturing of toilet tissue, serviettes, face masks, baby care and sanitary products at our factory in Galle. You supply the brand and we handle production, packing and labelling.</dd>
+            <dt>What is the minimum order quantity for private label manufacturing?</dt>
+            <dd class="faq-voice">Minimum order quantities depend on the product, pack size and packaging. Share your product mix and expected volumes and we will confirm the MOQ, pricing and lead time in your quotation.</dd>
+            <dt>Can I visit the factory before placing an order?</dt>
+            <dd class="faq-voice">Yes. Trade buyers can visit our plant at 496 Akuressa Road, Galle by appointment. Call or WhatsApp <a href="tel:0741008160" class="text-[var(--brand)] font-semibold">074 100 8160</a> to arrange a visit.</dd>
+            <dt>How do I request a wholesale quote?</dt>
+            <dd class="faq-voice">Use the <a href="contact.html" class="text-[var(--brand)] font-semibold">contact form</a>, email Sales@elegantenterprises.info or WhatsApp 074 100 8160 with product names, pack sizes and monthly volumes. We reply with pricing and lead times.</dd>
+          </dl>
+        </article>
       </div>
     </section>
 

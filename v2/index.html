@@ -36,7 +36,24 @@
       "addressRegion": "Southern Province",
       "addressCountry": "LK"
     },
+    "legalName": "Elegant Enterprises (Pvt) Ltd",
+    "slogan": "Hygiene essentials, crafted with care",
     "areaServed": { "@type": "Country", "name": "Sri Lanka" },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 6.0535,
+      "longitude": 80.221
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+94741008160",
+        "email": "Sales@elegantenterprises.info",
+        "contactType": "sales",
+        "areaServed": "LK",
+        "availableLanguage": ["English", "Sinhala"]
+      }
+    ],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"], "opens": "08:30", "closes": "17:30" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "14:30", "closes": "17:30" }
@@ -75,7 +92,7 @@
     "inLanguage": "en-LK",
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": [".speakable-intro", ".faq-voice"]
+      "cssSelector": [".speakable-intro"]
     }
   }
   </script>
@@ -85,18 +102,6 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.elegantenterprises.lk/" }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "What is Elegant Enterprises?", "acceptedAnswer": { "@type": "Answer", "text": "Elegant Enterprises is a hygiene product manufacturer in Galle, Sri Lanka. We make toilet tissue, serviettes, face masks, baby diapers, soaps and related sanitary goods for wholesale and private label buyers." } },
-      { "@type": "Question", "name": "Who does Elegant Enterprises supply in Sri Lanka?", "acceptedAnswer": { "@type": "Answer", "text": "We supply distributors, supermarkets, pharmacies, hotels, clinics, schools and corporate buyers across Sri Lanka. Orders ship from our Galle factory in retail packs or bulk cartons." } },
-      { "@type": "Question", "name": "Does Elegant Enterprises offer private label manufacturing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Private label refers to making and packing hygiene products under your brand at our plant. You share specs and artwork; we run production, QC and dispatch on agreed volumes." } },
-      { "@type": "Question", "name": "How do I request a wholesale quote?", "acceptedAnswer": { "@type": "Answer", "text": "Use the contact form, email Sales@elegantenterprises.info or WhatsApp 074 100 8160 with product names, pack sizes and monthly volumes. We reply with pricing and lead times." } }
     ]
   }
   </script>
@@ -121,6 +126,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/site.css?v=15">
   <link rel="stylesheet" href="css/premium.css?v=1">
+  <link rel="icon" href="assets/logo.webp" type="image/webp">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -239,19 +245,11 @@
       </div>
     </section>
 
-  <!-- ABOUT (AEO) -->
-  <section class="sec-pad px-4 sm:px-6 py-12 sm:py-16 bg-white border-y border-[var(--line)]" aria-labelledby="about-heading">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 id="about-heading" class="sec-title mb-4">What is Elegant Enterprises?</h2>
-      <p class="speakable-intro text-[var(--muted)] leading-relaxed text-base sm:text-lg">
-        <strong class="text-[var(--navy)] font-semibold">Elegant Enterprises</strong> is a sanitary and hygiene product manufacturer based in Galle, Sri Lanka. We convert tissue, pack face masks, and assemble baby and household hygiene lines at our Akuressa Road plant for trade buyers island-wide.
+    <section class="sec-pad px-4 sm:px-6 py-10 sm:py-12 bg-white border-y border-[var(--line)]">
+      <p class="speakable-intro max-w-3xl mx-auto text-center text-[var(--muted)] leading-relaxed text-base sm:text-lg">
+        <strong class="text-[var(--navy)] font-semibold">Elegant Enterprises</strong> is a sanitary and hygiene manufacturer in Galle, Sri Lanka — tissue, masks, baby care, and related lines for trade buyers island-wide.
       </p>
-      <p class="text-[var(--muted)] leading-relaxed mt-4 text-base sm:text-lg">
-        <strong class="text-[var(--navy)] font-semibold">Private label manufacturing</strong> refers to producing goods under your brand name in our factory. We handle formulation where needed, packing, carton labelling, and dispatch so retailers and distributors can sell under their own label.
-      </p>
-      <p class="text-xs text-[var(--muted)] mt-6">Page updated <time datetime="2026-11-09">9 November 2026</time></p>
-    </div>
-  </section>
+    </section>
 
     <!-- RANGE -->
     <section class="sec-pad py-16 sm:py-24 lg:py-28 px-4 sm:px-6 bg-white">
@@ -259,7 +257,7 @@
         <div class="reveal flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-12">
           <div class="sec-head">
             <p class="eyebrow mb-4">Our range</p>
-            <h2 class="sec-title">What products do we manufacture?</h2>
+            <h2 id="products-manufacture-heading" class="sec-title">Our product range</h2>
             <p class="sec-sub">Four focused categories, each available in retail packs and trade cartons.</p>
           </div>
           <a href="products.html" class="text-sm font-bold text-[var(--brand)] inline-flex items-center gap-2 hover:gap-3 transition-all">All product details <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
@@ -268,28 +266,28 @@
           <a href="products.html#masks" class="range-card">
             <span class="num">01</span>
             <span class="icon-bubble"><i class="fas fa-head-side-mask" aria-hidden="true"></i></span>
-            <h3 class="serif">Face masks &amp; PPE</h3>
+            <h3 id="range-face-masks" class="serif">Face masks &amp; PPE</h3>
             <p>3-ply, respirator, and dust masks for clinics, pharmacies, and workplaces.</p>
             <span class="go">View range <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></span>
           </a>
           <a href="products.html#tissue" class="range-card">
             <span class="num">02</span>
             <span class="icon-bubble"><i class="fas fa-toilet-paper" aria-hidden="true"></i></span>
-            <h3 class="serif">Tissue &amp; paper</h3>
+            <h3 id="range-tissue" class="serif">Tissue &amp; paper</h3>
             <p>Toilet rolls, serviettes, and commercial paper goods for homes and hotels.</p>
             <span class="go">View range <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></span>
           </a>
           <a href="products.html#baby" class="range-card">
             <span class="num">03</span>
             <span class="icon-bubble"><i class="fas fa-baby" aria-hidden="true"></i></span>
-            <h3 class="serif">Baby care</h3>
+            <h3 id="range-baby-care" class="serif">Baby care</h3>
             <p>Absorbent, comfortable diapers designed with sensitive skin in mind.</p>
             <span class="go">View range <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></span>
           </a>
           <a href="products.html#sanitary" class="range-card">
             <span class="num">04</span>
             <span class="icon-bubble"><i class="fas fa-pump-soap" aria-hidden="true"></i></span>
-            <h3 class="serif">Sanitary essentials</h3>
+            <h3 id="range-sanitary" class="serif">Sanitary essentials</h3>
             <p>Soaps, household sanitizing products, and hygiene accessories.</p>
             <span class="go">View range <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></span>
           </a>
@@ -302,28 +300,28 @@
       <div class="max-w-7xl mx-auto">
         <div class="reveal sec-head sec-head--center">
           <p class="eyebrow eyebrow--light mb-4">Why Elegant</p>
-          <h2 class="sec-title">A manufacturing partner you can <span class="accent-italic">rely on</span></h2>
+          <h2 id="why-partner-heading" class="sec-title">A manufacturing partner you can <span class="accent-italic">rely on</span></h2>
           <p class="sec-sub">Consistent quality, clear labelling, and a team that answers the phone.</p>
         </div>
         <div class="why-grid">
           <article class="reveal why-card" style="--d:0ms">
             <div class="ico"><i class="fas fa-industry" aria-hidden="true"></i></div>
-            <h3 class="serif">Local production</h3>
+            <h3 id="why-local-production" class="serif">Local production</h3>
             <p>Made on our own lines in Galle, so you buy locally instead of waiting on imports.</p>
           </article>
           <article class="reveal why-card" style="--d:100ms">
             <div class="ico"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
-            <h3 class="serif">Quality control</h3>
+            <h3 id="why-quality-control" class="serif">Quality control</h3>
             <p>Controlled inputs, line checks, batch records, and a final visual check before sealing.</p>
           </article>
           <article class="reveal why-card" style="--d:200ms">
             <div class="ico"><i class="fas fa-box-open" aria-hidden="true"></i></div>
-            <h3 class="serif">Flexible packing</h3>
+            <h3 id="why-flexible-packing" class="serif">Flexible packing</h3>
             <p>Retail packs, bulk cartons, and pallet-ready dispatch in the sizes your market needs.</p>
           </article>
           <article class="reveal why-card" style="--d:300ms">
             <div class="ico"><i class="fas fa-handshake" aria-hidden="true"></i></div>
-            <h3 class="serif">Trade partnership</h3>
+            <h3 id="why-trade-partnership" class="serif">Trade partnership</h3>
             <p>We plan around your volumes, delivery windows, and branding so shelves stay stocked.</p>
           </article>
         </div>
@@ -335,14 +333,14 @@
       <div class="max-w-7xl mx-auto">
         <div class="reveal sec-head sec-head--center">
           <p class="eyebrow mb-4">Private label</p>
-          <h2 class="sec-title">Your brand, <span class="italic text-[var(--brand)]">our production</span></h2>
+          <h2 id="private-label-heading" class="sec-title">Your brand, <span class="italic text-[var(--brand)]">our production</span></h2>
           <p class="sec-sub">Built for distributors, retailers, pharmacies, hotels, clinics, and corporate buyers.</p>
         </div>
         <ol class="flow">
-          <li class="reveal flow-step" style="--d:0ms"><div class="step-num">1</div><div><h3 class="serif">Brief</h3><p>Share products, volumes, and the branding you have in mind.</p></div></li>
-          <li class="reveal flow-step" style="--d:100ms"><div class="step-num">2</div><div><h3 class="serif">Specification</h3><p>We agree pack sizes, labelling, pricing, and minimum order.</p></div></li>
-          <li class="reveal flow-step" style="--d:200ms"><div class="step-num">3</div><div><h3 class="serif">Production</h3><p>Your order runs with batch records and line checks.</p></div></li>
-          <li class="reveal flow-step" style="--d:300ms"><div class="step-num">4</div><div><h3 class="serif">Pack &amp; dispatch</h3><p>Counted, sealed, labelled, and loaded for delivery.</p></div></li>
+          <li class="reveal flow-step" style="--d:0ms"><div class="step-num">1</div><div><h3 id="private-label-brief" class="serif">Brief</h3><p>Share products, volumes, and the branding you have in mind.</p></div></li>
+          <li class="reveal flow-step" style="--d:100ms"><div class="step-num">2</div><div><h3 id="private-label-spec" class="serif">Specification</h3><p>We agree pack sizes, labelling, pricing, and minimum order.</p></div></li>
+          <li class="reveal flow-step" style="--d:200ms"><div class="step-num">3</div><div><h3 id="private-label-production" class="serif">Production</h3><p>Your order runs with batch records and line checks.</p></div></li>
+          <li class="reveal flow-step" style="--d:300ms"><div class="step-num">4</div><div><h3 id="private-label-dispatch" class="serif">Pack &amp; dispatch</h3><p>Counted, sealed, labelled, and loaded for delivery.</p></div></li>
         </ol>
         <div class="buyer-row justify-center">
           <span class="buyer-chip"><i class="fas fa-warehouse" aria-hidden="true"></i> Distributors</span>
@@ -365,7 +363,7 @@
           <div class="ft-visual">
             <i class="fas fa-industry bg" aria-hidden="true"></i>
             <p class="eyebrow eyebrow--light mb-3">Our plant</p>
-            <h2 class="serif text-4xl sm:text-5xl font-semibold leading-[1.05]">Rooted in Galle</h2>
+            <h2 id="galle-factory-heading" class="serif text-4xl sm:text-5xl font-semibold leading-[1.05]">Rooted in Galle</h2>
             <p class="text-white/75 mt-2 text-sm">496 Akuressa Road, Galle 80000</p>
           </div>
           <div class="ft-body">
@@ -384,32 +382,12 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="sec-pad py-16 sm:py-20 px-4 sm:px-6 bg-white border-t border-[var(--line)]" aria-labelledby="faq-heading">
-      <div class="max-w-7xl mx-auto">
-        <div class="sec-head sec-head--center mb-10">
-          <p class="eyebrow mb-4">Common questions</p>
-          <h2 id="faq-heading" class="sec-title">How can buyers work with us?</h2>
-        </div>
-        <dl class="faq-block">
-          <dt>What is Elegant Enterprises?</dt>
-          <dd class="faq-voice">Elegant Enterprises is a hygiene product manufacturer in Galle, Sri Lanka. We make toilet tissue, serviettes, face masks, baby diapers, soaps and related sanitary goods for wholesale and private label buyers.</dd>
-          <dt>Who do you supply across Sri Lanka?</dt>
-          <dd class="faq-voice">We supply distributors, supermarkets, pharmacies, hotels, clinics, schools and corporate buyers island-wide. Orders ship from our Galle factory in retail packs or bulk cartons.</dd>
-          <dt>Do you offer private label manufacturing?</dt>
-          <dd class="faq-voice">Yes. Private label means making and packing hygiene products under your brand at our plant. You share specs and artwork; we run production, quality checks and dispatch on agreed volumes.</dd>
-          <dt>How do I request a wholesale quote?</dt>
-          <dd class="faq-voice">Use the contact form, email Sales@elegantenterprises.info or WhatsApp 074 100 8160 with product names, pack sizes and monthly volumes. We reply with pricing and lead times.</dd>
-        </dl>
-      </div>
-    </section>
-
     <!-- CTA -->
     <section class="px-4 sm:px-6 pb-12 sm:pb-20 lg:pb-24">
       <div class="reveal cta-sky max-w-7xl mx-auto rounded-[24px] sm:rounded-[32px] text-white px-5 sm:px-14 py-10 sm:py-16">
         <div class="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8 text-center lg:text-left">
           <div>
-            <h2 class="text-[2rem] min-[400px]:text-4xl sm:text-5xl font-semibold leading-[1.05] mb-3">Partner with a local manufacturer</h2>
+            <h2 id="partner-cta-heading" class="text-[2rem] min-[400px]:text-4xl sm:text-5xl font-semibold leading-[1.05] mb-3">Partner with a local manufacturer</h2>
             <p class="text-white/90 text-base sm:text-lg">Share your products and volumes — we'll reply with availability and pricing.</p>
           </div>
           <div class="flex flex-col sm:flex-row gap-3 justify-center shrink-0">

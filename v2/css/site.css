@@ -15,6 +15,50 @@
 
 html { scroll-behavior: smooth; }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--sky);
+  outline-offset: 2px;
+}
+
+.faq-block {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.faq-block dt {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 1.5rem;
+}
+
+.faq-block dt:first-child { margin-top: 0; }
+
+.faq-block dd {
+  margin-left: 0;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
 body {
   font-family: "Manrope", system-ui, sans-serif;
   color: var(--ink);

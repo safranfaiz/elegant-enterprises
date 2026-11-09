@@ -133,9 +133,17 @@
               </li>
               <li class="flex gap-4">
                 <span class="icon-bubble !w-11 !h-11 shrink-0"><i class="fas fa-envelope" aria-hidden="true"></i></span>
-                <div>
-                  <p class="font-semibold text-[var(--navy)]">Sales email</p>
-                  <a href="mailto:sales@elegantenterprises.lk" class="text-[var(--brand)] font-semibold break-all">sales@elegantenterprises.lk</a>
+                <div class="space-y-3 w-full min-w-0">
+                  <p class="font-semibold text-[var(--navy)]">Email</p>
+                  <div>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-[var(--muted)]">General email</p>
+                    <a href="mailto:general@elegantenterprises.lk" class="text-[var(--brand)] font-semibold break-all">general@elegantenterprises.lk</a>
+                    <!-- <p class="text-xs text-[var(--muted)] mt-0.5">Website enquiry form sends here</p> -->
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-[var(--muted)]">Sales email</p>
+                    <a href="mailto:sales@elegantenterprises.lk" class="text-[var(--brand)] font-semibold break-all">sales@elegantenterprises.lk</a>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -155,7 +163,7 @@
         <div class="lg:col-span-3 card p-7 sm:p-9">
           <h2 class="text-4xl font-semibold text-[var(--navy)] mb-2">Send an enquiry</h2>
           <!-- <p class="text-[var(--muted)] text-sm mb-6">Send on WhatsApp to <strong class="text-[var(--navy)]">074 100 8160</strong> (sales), or use email. For quotes call sales; for general matters use <strong class="text-[var(--navy)]">074 100 8153</strong>.</p> -->
-          <p class="text-[var(--muted)] text-xs mb-4">Send by email: name, email and message are required. Phone is optional.</p>
+          <p class="text-[var(--muted)] text-xs mb-4">Send by email: name, email and message are required (delivered to <strong class="text-[var(--navy)]">general@elegantenterprises.lk</strong>). Phone is optional.</p>
           <form id="contact-form" class="space-y-4" action="#" method="get" novalidate>
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
@@ -189,7 +197,7 @@
               <button type="button" id="send-whatsapp" class="btn-whatsapp inline-flex w-full sm:w-auto"><i class="fab fa-whatsapp" aria-hidden="true"></i> Send on WhatsApp</button>
               <button type="submit" class="btn-outline inline-flex w-full sm:w-auto">Send by email</button>
             </div>
-            <p id="form-hint" class="text-xs text-[var(--muted)] hidden">If WhatsApp or email did not open: sales 074 100 8160, sales rep 076 642 8164, general 074 100 8153 — or email sales@elegantenterprises.lk.</p>
+            <p id="form-hint" class="text-xs text-[var(--muted)] hidden">If WhatsApp or email did not open: sales 074 100 8160, sales rep 076 642 8164, general 074 100 8153 — or email general@elegantenterprises.lk or sales@elegantenterprises.lk.</p>
           </form>
         </div>
       </div>
@@ -232,7 +240,10 @@
         <p class="text-xs text-white/50 uppercase tracking-wide mt-2">General enquiries</p>
         <a href="tel:0741008153" class="block text-sm text-white font-semibold">074 100 8153</a>
         <a href="https://wa.me/94741008160?text=Hello%20Elegant%20Enterprises%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="inline-flex items-center gap-2 mt-3 text-sm text-[#7dffb3] hover:text-white" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp sales</a>
-        <a href="mailto:sales@elegantenterprises.lk" class="block mt-2 text-sm break-all hover:text-white">sales@elegantenterprises.lk</a>
+        <p class="text-xs text-white/50 uppercase tracking-wide mt-3">Sales email</p>
+        <a href="mailto:sales@elegantenterprises.lk" class="block text-sm break-all hover:text-white">sales@elegantenterprises.lk</a>
+        <p class="text-xs text-white/50 uppercase tracking-wide mt-2">General email</p>
+        <a href="mailto:general@elegantenterprises.lk" class="block text-sm break-all hover:text-white">general@elegantenterprises.lk</a>
       </div>
     </div>
     <p class="text-center text-xs border-t border-white/10 py-5">&copy; <span id="year"></span> Elegant Enterprises Pvt Ltd. All rights reserved.</p>
@@ -332,7 +343,7 @@
       e.preventDefault();
       if (!validateEmailEnquiry()) return;
       var subject = document.getElementById('subject').value;
-      window.location.href = 'mailto:sales@elegantenterprises.lk?subject=' + encodeURIComponent(subject + ' — Elegant Enterprises') + '&body=' + encodeURIComponent(enquiryLines());
+      window.location.href = 'mailto:general@elegantenterprises.lk?subject=' + encodeURIComponent(subject + ' — Elegant Enterprises') + '&body=' + encodeURIComponent(enquiryLines());
       document.getElementById('form-hint').classList.remove('hidden');
     });
   </script>

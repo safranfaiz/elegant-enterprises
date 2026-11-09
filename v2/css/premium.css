@@ -61,7 +61,7 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 /* ---------- Range showcase ---------- */
 .range-showcase { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 640px) { .range-showcase { grid-template-columns: 1fr 1fr; gap: 1.25rem; } }
-@media (min-width: 1024px) { .range-showcase { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .range-showcase { grid-template-columns: repeat(2, 1fr); max-width: 56rem; margin-inline: auto; } }
 
 .range-card {
   position: relative; display: flex; flex-direction: column; min-height: 17rem;

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/site.css?v=15">
+  <link rel="stylesheet" href="css/site.css?v=16">
   <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
 <body class="antialiased">
@@ -163,8 +163,8 @@
         <div class="lg:col-span-3 card p-7 sm:p-9">
           <h2 class="text-4xl font-semibold text-[var(--navy)] mb-2">Send an enquiry</h2>
           <!-- <p class="text-[var(--muted)] text-sm mb-6">Send on WhatsApp to <strong class="text-[var(--navy)]">074 100 8160</strong> (sales), or use email. For quotes call sales; for general matters use <strong class="text-[var(--navy)]">074 100 8153</strong>.</p> -->
-          <p class="text-[var(--muted)] text-xs mb-4">Send by email: name, email and message are required (delivered to <strong class="text-[var(--navy)]">general@elegantenterprises.lk</strong>). Phone is optional.</p>
-          <form id="contact-form" class="space-y-4" action="#" method="get" novalidate>
+          <p class="text-[var(--muted)] text-xs mb-4">Send by email: name, email and message are required (sent securely to <strong class="text-[var(--navy)]">general@elegantenterprises.lk</strong> — no mail app needed). Phone is optional. Changing the subject updates a suggested message you can edit.</p>
+          <form id="contact-form" class="space-y-4" action="#" method="post" novalidate>
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label for="name" class="block text-sm font-semibold mb-1.5">Your name <span class="text-red-600 font-normal" aria-hidden="true">*</span></label>
@@ -251,101 +251,17 @@
 
   <a class="wa-float" href="https://wa.me/94741008160?text=Hello%20Elegant%20Enterprises%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
 
+  <div id="contact-toast" class="contact-toast contact-toast--hidden" role="status" aria-live="polite" aria-atomic="true">
+    <div class="contact-toast__inner">
+      <button type="button" id="contact-toast-close" class="contact-toast__close" aria-label="Dismiss notification">&times;</button>
+      <p id="contact-toast-text" class="contact-toast__text"></p>
+      <div id="contact-toast-action" class="contact-toast__action hidden"></div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    function enquiryLines() {
-      var name = document.getElementById('name').value.trim();
-      var phone = document.getElementById('phone').value.trim();
-      var email = document.getElementById('email').value.trim();
-      var subject = document.getElementById('subject').value;
-      var message = document.getElementById('message').value.trim();
-      return [
-        'Hello Elegant Enterprises,',
-        '',
-        'Subject: ' + subject,
-        'Name: ' + name,
-        phone ? 'Phone: ' + phone : '',
-        email ? 'Email: ' + email : '',
-        '',
-        message
-      ].filter(function (line) { return line !== ''; }).join('\n');
-    }
-
-    function clearFieldErrors() {
-      ['name', 'phone', 'email', 'message'].forEach(function (id) {
-        var el = document.getElementById(id);
-        if (el) el.setCustomValidity('');
-      });
-    }
-
-    function validateEmailEnquiry() {
-      clearFieldErrors();
-      var form = document.getElementById('contact-form');
-      var name = document.getElementById('name');
-      var email = document.getElementById('email');
-      var message = document.getElementById('message');
-      var ok = true;
-
-      if (!name.value.trim()) {
-        name.setCustomValidity('Please enter your name.');
-        ok = false;
-      }
-      if (!email.value.trim()) {
-        email.setCustomValidity('Email is required to send by email.');
-        ok = false;
-      } else if (!email.checkValidity()) {
-        email.setCustomValidity('Please enter a valid email address.');
-        ok = false;
-      }
-      if (!message.value.trim()) {
-        message.setCustomValidity('Please enter your message.');
-        ok = false;
-      }
-
-      if (!ok) form.reportValidity();
-      return ok;
-    }
-
-    function validateWhatsAppEnquiry() {
-      clearFieldErrors();
-      var form = document.getElementById('contact-form');
-      var name = document.getElementById('name');
-      var phone = document.getElementById('phone');
-      var message = document.getElementById('message');
-      var ok = true;
-
-      if (!name.value.trim()) {
-        name.setCustomValidity('Please enter your name.');
-        ok = false;
-      }
-      if (!phone.value.trim()) {
-        phone.setCustomValidity('Please enter your phone number for WhatsApp.');
-        ok = false;
-      }
-      if (!message.value.trim()) {
-        message.setCustomValidity('Please enter your message.');
-        ok = false;
-      }
-
-      if (!ok) form.reportValidity();
-      return ok;
-    }
-
-    document.getElementById('send-whatsapp').addEventListener('click', function () {
-      if (!validateWhatsAppEnquiry()) return;
-      window.open('https://wa.me/94741008160?text=' + encodeURIComponent(enquiryLines()), '_blank', 'noopener');
-      document.getElementById('form-hint').classList.remove('hidden');
-    });
-
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!validateEmailEnquiry()) return;
-      var subject = document.getElementById('subject').value;
-      window.location.href = 'mailto:general@elegantenterprises.lk?subject=' + encodeURIComponent(subject + ' — Elegant Enterprises') + '&body=' + encodeURIComponent(enquiryLines());
-      document.getElementById('form-hint').classList.remove('hidden');
-    });
-  </script>
+  <script src="js/contact-email-config.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

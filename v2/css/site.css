@@ -1065,3 +1065,96 @@ header.is-scrolled { box-shadow: 0 10px 30px rgba(4, 36, 58, 0.08); }
 
   .logo-plate--header img { height: 44px; }
 }
+
+.contact-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  z-index: 200;
+  width: min(92vw, 28rem);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-toast--hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(0.75rem);
+  visibility: hidden;
+}
+
+.contact-toast:not(.contact-toast--hidden) {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.contact-toast__inner {
+  position: relative;
+  padding: 1rem 2.5rem 1rem 1.15rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 48px rgba(4, 36, 58, 0.18);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.contact-toast--success .contact-toast__inner {
+  border-color: rgba(18, 140, 126, 0.35);
+  background: linear-gradient(180deg, #f0faf8 0%, #fff 100%);
+}
+
+.contact-toast--error .contact-toast__inner {
+  border-color: rgba(220, 38, 38, 0.25);
+  background: linear-gradient(180deg, #fff5f5 0%, #fff 100%);
+}
+
+.contact-toast__text {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.contact-toast__link {
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-toast__close {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 0.25rem 0.4rem;
+  cursor: pointer;
+  border-radius: 0.35rem;
+}
+
+.contact-toast__close:hover {
+  color: var(--navy);
+  background: var(--paper);
+}
+
+.contact-toast__action {
+  margin-top: 0.75rem;
+}
+
+.contact-toast__action.hidden { display: none; }
+
+.contact-toast__wa {
+  display: inline-flex;
+  font-size: 0.875rem;
+  padding: 0.55rem 1rem;
+}
+
+#contact-form button[type="submit"]:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

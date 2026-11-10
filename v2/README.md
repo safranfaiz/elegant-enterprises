@@ -28,6 +28,7 @@ Static marketing site for **Elegant Enterprises Pvt Ltd**, a sanitary and hygien
 - [Google Fonts](https://fonts.google.com/): Cormorant Garamond (headings), Manrope (body)
 - [Font Awesome 6](https://fontawesome.com/) (icons)
 - No build step or backend — open any `.html` file in a browser or serve the folder locally
+- Contact form email via [Web3Forms](https://web3forms.com) (`js/contact-form.js`, `js/contact-email-config.js`)
 
 ## Run locally
 
@@ -59,6 +60,16 @@ After editing `site.css`, bump the `?v=` query on the stylesheet link in each HT
 - **Phone:** 074 100 8160  
 - **Email:** sales@elegantenterprises.lk  
 - **Factory:** 496 Akuressa Road, Galle 80000, Sri Lanka  
+
+## Contact form email (Send by email)
+
+The contact page sends enquiries in the browser via Web3Forms (no mail app popup). Each subject type uses a plain-text template in `js/contact-form.js`.
+
+1. Sign up at [web3forms.com](https://web3forms.com) and create a form with recipient **general@elegantenterprises.lk**.
+2. Copy the access key into `js/contact-email-config.js` (`accessKey: '…'`).
+3. Deploy the site over **HTTPS** (required for `fetch` to the Web3Forms API).
+
+Success and error feedback appears in a popup at the bottom of the screen and hides after 10 seconds.
 
 ## Notes
 

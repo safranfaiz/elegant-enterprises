@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice — Elegant Enterprises</title>
+  <style>
+    :root { --ink: #0f172a; --muted: #64748b; --line: #e2e8f0; --accent: #007bb0; --paper: #fff; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.5; color: var(--ink); background: #f1f5f9; padding: 24px 16px 48px; }
+    .sheet { max-width: 820px; margin: 0 auto; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 40px 48px 48px; box-shadow: 0 4px 24px rgba(15,23,42,.06); }
+    .head { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 24px; border-bottom: 2px solid var(--ink); margin-bottom: 24px; }
+    .head h1 { font-size: 26px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .pledge { display: inline-block; margin-top: 10px; padding: 5px 10px; font-size: 12px; color: var(--ink); background: #ecf8fd; border-left: 3px solid var(--accent); border-radius: 3px; }
+    .pledge strong { color: var(--accent); }
+    .meta { flex-shrink: 0; white-space: nowrap; text-align: right; font-size: 13px; color: var(--muted); }
+    .meta strong { color: var(--ink); display: block; margin-bottom: 4px; }
+    .meta dl { margin-top: 10px; }
+    .meta dt, .meta dd { display: inline; }
+    .meta dt { font-weight: 600; color: var(--ink); }
+    .meta dd::after { content: ""; display: block; height: 3px; }
+    .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 20px; }
+    .parties h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 8px; }
+    .parties .name { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 12px; }
+    th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); padding: 8px 10px; border-bottom: 2px solid var(--line); }
+    th:last-child, td:last-child { text-align: right; }
+    td { padding: 11px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    td.desc .sub { color: var(--muted); font-size: 11px; margin-top: 3px; }
+    tr.group td { background: #f8fafc; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); padding: 8px 10px; text-align: left; }
+    tr.group-total td { font-weight: 600; color: var(--muted); border-bottom: 2px solid var(--line); }
+    .tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--accent); border-radius: 3px; padding: 1px 5px; margin-left: 6px; vertical-align: 1px; }
+    .totals { margin-left: auto; width: min(100%, 320px); }
+    .totals td { border: none; padding: 5px 10px; }
+    .totals tr.discount td { color: #15803d; font-weight: 600; }
+    .totals tr.grand td { font-size: 17px; font-weight: 700; padding-top: 10px; border-top: 2px solid var(--ink); }
+    .notes { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+    .notes h3 { font-size: 11px; color: var(--ink); margin-bottom: 6px; text-transform: uppercase; }
+    .notes ul { margin-left: 16px; }
+    .notes li { margin-bottom: 3px; }
+    .notes strong { color: var(--ink); }
+    .bank { display: grid; grid-template-columns: max-content 1fr; gap: 2px 14px; margin: 6px 0 0; padding: 8px 12px; background: #f8fafc; border: 1px solid var(--line); border-radius: 6px; width: max-content; }
+    .bank dt { font-weight: 600; color: var(--muted); }
+    .bank dd { color: var(--ink); font-weight: 600; }
+    @media print {
+      @page { size: A4; margin: 10mm 12mm; }
+      body { background: #fff; padding: 0; }
+      .sheet { border: none; box-shadow: none; border-radius: 0; max-width: none; padding: 0; }
+      .no-print { display: none !important; }
+      tr, .totals { page-break-inside: avoid; }
+      body { font-size: 12px; line-height: 1.35; }
+      td.desc .sub { font-size: 10px; margin-top: 1px; }
+      .head { padding-bottom: 14px; margin-bottom: 14px; }
+      .parties { margin-bottom: 12px; }
+      td { padding: 5px 8px; }
+      .totals td { padding: 3px 8px; }
+      tr.group td { padding: 5px 8px; }
+      table { margin-bottom: 10px; }
+      .notes { margin-top: 12px; padding-top: 10px; font-size: 10px; }
+      .notes li { margin-bottom: 1px; }
+      .head h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <article class="sheet">
+    <header class="head">
+      <div>
+        <h1>Invoice</h1>
+        <p style="margin-top:6px;color:var(--muted);font-size:13px;">Custom static website, mail configuration &amp; email API integration,<br>SEO / GEO / AEO, domain, hosting &amp; deployment</p>
+        <p class="pledge"><strong>One-time payment</strong> for your website development: no hidden charges and no monthly fees.</p>
+      </div>
+      <div class="meta">
+        <strong>Muhammadh Safran</strong>
+        <dl>
+          <dt>Invoice date</dt> <dd>10 November 2026</dd>
+          <dt>Due date</dt> <dd>24 November 2026</dd>
+        </dl>
+      </div>
+    </header>
+
+    <section class="parties">
+      <div>
+        <h2>Bill from</h2>
+        <p class="name">Muhammadh Safran</p>
+        <p>Web Developer</p>
+        <p>Galle, Sri Lanka</p>
+        <p style="margin-top:8px;">+94 77 341 7545</p>
+      </div>
+      <div>
+        <h2>Bill to</h2>
+        <p class="name">Elegant Enterprises Pvt Ltd</p>
+        <p>496 Akuressa Road<br>Galle 80000<br>Sri Lanka</p>
+        <p style="margin-top:8px;">sales@elegantenterprises.lk<br>074 100 8160</p>
+      </div>
+    </section>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:4%">#</th>
+          <th style="width:52%">Description</th>
+          <th>Qty</th>
+          <th>Rate (LKR)</th>
+          <th>Amount (LKR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="group"><td colspan="5">A. Website build &amp; launch (original scope)</td></tr>
+        <tr>
+          <td>1</td>
+          <td class="desc"><strong>Discovery &amp; brand-aligned UI design</strong><p class="sub">Site structure, typography, logo-based colour palette, responsive layout.</p></td>
+          <td>1</td><td>28,000</td><td>28,000</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="desc"><strong>Custom static frontend (6 pages)</strong><p class="sub">Home, About, Products, Services, Factory, Contact: semantic HTML and custom CSS.</p></td>
+          <td>1</td><td>58,000</td><td>58,000</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="desc"><strong>Mobile UX, animations &amp; accessibility</strong><p class="sub">Sticky header, mobile menu, scroll reveals, reduced-motion support.</p></td>
+          <td>1</td><td>22,000</td><td>22,000</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="desc"><strong>Integrations &amp; on-page SEO</strong><p class="sub">WhatsApp and phone links, Google Maps, favicon, meta descriptions.</p></td>
+          <td>1</td><td>14,000</td><td>14,000</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="desc"><strong>Domain registration &amp; DNS</strong><p class="sub">Domain setup and DNS pointed to production hosting.</p></td>
+          <td>1</td><td>4,500</td><td>4,500</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="desc"><strong>Hosting setup &amp; SSL</strong> <span class="tag">Free</span><p class="sub">Hosting account, HTTPS enabled, environment ready for the live site. Hosting is provided free of charge.</p></td>
+          <td>1</td><td>0</td><td>0</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td class="desc"><strong>Production deployment &amp; go-live</strong><p class="sub">Files deployed, live URL tested, access handover.</p></td>
+          <td>1</td><td>10,000</td><td>10,000</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td class="desc"><strong>QA &amp; revisions</strong><p class="sub">Cross-device testing and feedback rounds.</p></td>
+          <td>1</td><td>10,000</td><td>10,000</td>
+        </tr>
+        <tr class="group-total"><td></td><td colspan="3">Subtotal: original scope</td><td>146,500</td></tr>
+
+        <tr class="group"><td colspan="5">B. Additional scope (9 – 10 November 2026)</td></tr>
+        <tr>
+          <td>9</td>
+          <td class="desc"><strong>Mail configuration</strong> <span class="tag">Mail</span><p class="sub">Set up and configured the email delivery service, routed website enquiries to the general@elegantenterprises.lk mailbox, configured secure API access, and tested delivery to the company inbox.</p></td>
+          <td>1</td><td>6,000</td><td>6,000</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="desc"><strong>Mail API integration: contact form "Send by email"</strong> <span class="tag">Mail</span><p class="sub">Contact form sends enquiries directly from the website through a secure mail API, so no mail app is needed. Includes 5 email templates, one per subject (Quote, Bulk / distribution, Private label / OEM, Factory visit, General); suggested message text per subject; field validation; a "Sending…" state; success and error pop-ups; and a WhatsApp fallback if sending fails.</p></td>
+          <td>1</td><td>16,000</td><td>16,000</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td class="desc"><strong>Technical SEO, GEO &amp; AEO</strong><p class="sub">Schema.org structured data across all pages (Organization, LocalBusiness, Product, Service, HowTo, Breadcrumb, Speakable), Open Graph and Twitter cards, sitemap.xml and robots.txt, location (GEO) and answer-engine (AEO) optimisation.</p></td>
+          <td>1</td><td>16,000</td><td>16,000</td>
+        </tr>
+        <tr class="group-total"><td></td><td colspan="3">Subtotal: additional scope</td><td>38,000</td></tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <table>
+        <tr><td>A. Original scope</td><td>LKR 146,500</td></tr>
+        <tr><td>B. Additional scope</td><td>LKR 38,000</td></tr>
+        <tr><td>Subtotal</td><td>LKR 184,500</td></tr>
+        <tr class="discount"><td>Discount (20%)</td><td>− LKR 36,900</td></tr>
+        <tr class="grand"><td>Total due</td><td>LKR 147,600</td></tr>
+      </table>
+    </div>
+
+    <section class="notes">
+      <h3>Payment</h3>
+      <p>Please pay by bank transfer to:</p>
+      <dl class="bank">
+        <dt>Account name</dt> <dd>Mohamed Faiz Mohamed Safran</dd>
+        <dt>Account number</dt> <dd>8270055654</dd>
+        <dt>Bank</dt> <dd>Commercial Bank</dd>
+        <dt>Branch</dt> <dd>Galle</dd>
+      </dl>
+      <h3 style="margin-top:12px;">Terms</h3>
+      <ul>
+        <li>Includes the live site, configured domain and DNS, hosting setup, deployment, and mail configuration and integration.</li>
+        <li><strong>6 months of free support</strong> from the invoice date: bug fixes, fixes for issues on existing pages, and improvements to existing features. New pages or new features are quoted separately.</li>
+        <li>Third-party renewals (domain and email service, if usage exceeds the included limits) are billed by those providers unless a maintenance plan is agreed.</li>
+      </ul>
+    </section>
+  </article>
+</body>
+</html>
